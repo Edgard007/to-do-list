@@ -1,6 +1,8 @@
 {
-  "app_name": "Scaffold",
-  "appLogo-alt": "scaffold Logo",
+  "app_name": "To do list",
+  "appLogo-alt": "To do list Logo",
+
+  "app_descrip": "A simple to do list app",
 
   "options_title": "Options",
   "lng": "Language",

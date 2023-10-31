@@ -1,6 +1,8 @@
 {
-  "app_name": "Andamio",
-  "appLogo-alt": "Logo de Andamio",
+  "app_name": "Lista de Tareas",
+  "appLogo-alt": "Logo de Lista de Tareas",
+
+  "app_descrip": "Aplicación para gestionar una lista de tareas.",
 
   "options_title": "Opciones",
   "lng": "Idioma",

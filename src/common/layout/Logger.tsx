@@ -17,14 +17,17 @@ const Logger = ({ children }: LoggerProps) => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
+  height: 100vh;
   position: relative;
 
   main {
+    position: absolute;
     width: 100%;
-    margin-top: var(--hNav);
-    min-height: calc(100vh - var(--hNav));
+    height: calc(100% - var(--hNav));
+    right: 0;
+    bottom: 0;
 
-    display: flex;
     background-color: var(--color-primary);
   }
 `;
