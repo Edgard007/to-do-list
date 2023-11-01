@@ -64,7 +64,7 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
       // ==> Restore info
       dispatch({
         type: "RESTORE",
-        payload: JSON.parse(todo),
+        payload: { todo: JSON.parse(todo) },
       });
     } else pushDefaultState();
   };

@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 // ==> Components
 import Input from "@components/Input";
-import Button from "@src/components/Button";
+import Button from "@components/Button";
+import Card from "@components/Card";
 
 // ==> Use Context
 import useTodoContext from "@utils/contexts/useTodoContext";
@@ -55,10 +56,7 @@ const Home = () => {
           <Button text={t("form_btn")} type="submit" />
         </form>
       </section>
-      <section>
-        <h1>{t("app_name")}</h1>
-        <p>{t("app_descrip")}</p>
-      </section>
+      <Card />
     </Wrapper>
   );
 };

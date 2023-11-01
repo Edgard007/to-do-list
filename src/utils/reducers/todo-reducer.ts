@@ -21,7 +21,7 @@ const todoReducer = (
       return body;
 
     case "REMOVE":
-      const record = action?.payload?.todo;
+      const record = action?.payload;
       body = state.filter((item: ITask) => item?.id !== record?.id);
 
       localStorage.setItem("TODO", JSON.stringify(body));
