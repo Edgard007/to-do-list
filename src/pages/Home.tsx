@@ -95,6 +95,7 @@ const Wrapper = styled.div`
         font-weight: var(--bold-weight);
         font-family: var(--primary-font);
         color: var(--color-secundary);
+        text-align: center;
       }
 
       p {
@@ -107,11 +108,19 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 800px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+
+    .first_section {
+      height: 100%;
+
+      article,
+      form {
+        height: 50%;
+      }
+    }
   }
 `;
 
