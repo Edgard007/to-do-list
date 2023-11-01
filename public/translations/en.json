@@ -3,6 +3,9 @@
   "appLogo-alt": "To do list Logo",
 
   "app_descrip": "A simple to do list app",
+  
+  "form_input": "What's on your mind?",
+  "form_btn": "Add",
 
   "options_title": "Options",
   "lng": "Language",

@@ -4,6 +4,9 @@
 
   "app_descrip": "Aplicación para gestionar una lista de tareas.",
 
+  "form_input": "¿Qué tienes en mente?",
+  "form_btn": "Añadir",
+
   "options_title": "Opciones",
   "lng": "Idioma",
   "lng_es": "Español",
