@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 
 // ==> Contexts
-import { ConfigProvider } from "@utils/providers/ConfigProvider";
+import { MainProvider } from "@utils/providers/MainProvider";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ConfigProvider>
+    <MainProvider>
       <App />
-    </ConfigProvider>
+    </MainProvider>
   </React.StrictMode>
 );

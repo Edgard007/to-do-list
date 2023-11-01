@@ -6,8 +6,14 @@ import styled from "styled-components";
 import Input from "@components/Input";
 import Button from "@src/components/Button";
 
+// ==> Use Context
+import useTodoContext from "@utils/contexts/useTodoContext";
+
 const Home = () => {
   const { t } = useTranslation();
+
+  // == Context
+  const { dispatch } = useTodoContext();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,6 +23,22 @@ const Home = () => {
     const input = elements.namedItem("input");
     const isInput = input instanceof HTMLInputElement;
     if (!isInput || input == null) return;
+
+    const value = input.value;
+    if (value.trim() === "") return;
+
+    const payload = {
+      id: crypto.randomUUID(),
+      text: value,
+      timestamp: new Date().getTime(),
+    };
+
+    dispatch({
+      type: "SET_TODO",
+      payload: {
+        todo: payload,
+      },
+    });
 
     input.value = "";
   };
