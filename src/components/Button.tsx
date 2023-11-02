@@ -72,7 +72,7 @@ const Wrapper = styled.div<WrapperProps>`
 
     :active {
       opacity: 0.5;
-      transition: 0.3s;
+      transition: var(--fast-animation);
     }
 
     :disabled {

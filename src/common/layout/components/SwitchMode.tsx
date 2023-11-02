@@ -90,7 +90,7 @@ const Wrapper = styled.div<StyledProps>`
     border-radius: 56px;
     transform: translateY(-50%);
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: var(--slow-animation);
     overflow: hidden;
     border: 1px solid var(--color-secundary);
   }
@@ -111,7 +111,7 @@ const Wrapper = styled.div<StyledProps>`
       background-color: var(--color-yellow);
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      transition: 0.3s ease;
+      transition: var(--slow-animation);
     }
   }
 
@@ -130,7 +130,7 @@ const Wrapper = styled.div<StyledProps>`
     font-size: 15px;
     line-height: 0px;
     color: var(--color-yellow);
-    transition: 0.3s ease;
+    transition: var(--slow-animation);
     transform: translate(-50%, -50%);
   }
 
@@ -151,7 +151,7 @@ const Wrapper = styled.div<StyledProps>`
       background-color: var(--color-secundary);
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      transition: 0.3s ease;
+      transition: var(--slow-animation);
     }
 
     &::after {
@@ -163,7 +163,7 @@ const Wrapper = styled.div<StyledProps>`
       height: 10px;
       background-color: var(--color-black);
       border-radius: 50%;
-      transition: 0s ease;
+      transition: var(--slow-animation);
     }
   }
 

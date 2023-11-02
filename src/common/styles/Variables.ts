@@ -64,6 +64,11 @@ const Variables = css<{ theme?: DefaultTheme }>`
     --z-high: 10;
     --z-md: 5;
     --z-low: 1;
+
+    // -> Animations duration
+    --fast-animation: all 0.2s ease;
+    --medium-animation: all 0.5s ease;
+    --slow-animation: all 1s ease;
   }
 `;
 

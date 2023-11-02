@@ -80,7 +80,7 @@ const Wrapper = styled.div`
     border: none;
     width: 35%;
     height: 35%;
-    transition: all 0.5s ease;
+    transition: var(--medium-animation);
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -107,7 +107,7 @@ const Wrapper = styled.div`
     background-color: var(--color-primary);
     z-index: calc(var(--z-md) + 1);
     border-radius: 10px;
-    transition: all 0.5s ease;
+    transition: var(--medium-animation);
     box-shadow: 0 0 5px var(--color-secundary);
   }
 
@@ -123,7 +123,7 @@ const Wrapper = styled.div`
     font-family: var(--primary-font);
     font-weight: var(--bold-weight);
     color: var(--color-secundary);
-    transition: 0.5s ease;
+    transition: var(--medium-animation);
     cursor: pointer;
     list-style: none;
     width: 80%;

@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
       margin: 0px;
       padding: 0px;
       font-family: var(--font-main);
+      transition: var(--slow-animation) background-color, var(--slow-animation) color;
   }
 
   ::-webkit-scrollbar {
