@@ -42,6 +42,14 @@ const Wrapper = styled.section`
   padding: 5rem 1rem;
   overflow: scroll;
 
+  @media (max-width: 800px) {
+    padding: 0.5rem 1.5rem;
+
+    .card {
+      width: 100% !important;
+    }
+  }
+
   .card {
     background-color: var(--color-primary);
     border-radius: 0.5rem;

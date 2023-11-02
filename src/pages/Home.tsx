@@ -112,6 +112,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 10px;
 
     .first_section {
       height: 100%;
