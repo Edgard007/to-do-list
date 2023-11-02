@@ -10,6 +10,10 @@ import Home from "@pages/Home";
 const App = () => {
   useEffect(() => {
     console.clear();
+
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", "var(--color-primary)");
   }, []);
 
   return (

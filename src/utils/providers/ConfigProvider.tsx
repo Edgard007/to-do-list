@@ -68,8 +68,15 @@ export const ConfigProvider = ({ children }: ConfigProviderProps) => {
       payload: body,
     });
 
-    changeLanguage(body?.lng);
+    lngApp(body?.lng);
+  };
+
+  const lngApp = (lng: LngSite) => {
+    changeLanguage(lng);
     document.title = i18n.t("app_name");
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", i18n.t("app_descrip"));
   };
 
   const restoreState = () => {
@@ -84,8 +91,7 @@ export const ConfigProvider = ({ children }: ConfigProviderProps) => {
         payload: body,
       });
 
-      changeLanguage(body?.lng);
-      document.title = i18n.t("app_name");
+      lngApp(body?.lng);
     } else getDeviceConfig();
   };
 
@@ -106,8 +112,7 @@ export const ConfigProvider = ({ children }: ConfigProviderProps) => {
       },
     });
 
-    changeLanguage(lng);
-    document.title = i18n.t("app_name");
+    lngApp(lng);
   };
 
   return (
