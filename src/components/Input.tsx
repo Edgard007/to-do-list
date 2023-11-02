@@ -24,36 +24,34 @@ const Input = ({
   className,
   width,
   error,
-}: InputProps) => {
-  return (
-    <Wrapper width={width} error={error}>
-      <div className="contain">
-        <label>{label}</label>
-        <>
-          {type === "textarea" ? (
-            <textarea
-              name={name}
-              className={"customInput " + className}
-              onChange={(e) => onChange && onChange(e?.target?.value, e)}
-              value={value}
-              readOnly={readonly}
-            />
-          ) : (
-            <input
-              type={type}
-              name={name}
-              autoComplete="off"
-              className={"customInput " + className}
-              onChange={(e) => onChange && onChange(e?.target?.value, e)}
-              value={value}
-              readOnly={readonly}
-            />
-          )}
-        </>
-      </div>
-    </Wrapper>
-  );
-};
+}: InputProps) => (
+  <Wrapper width={width} error={error}>
+    <div className="contain">
+      <label>{label}</label>
+      <>
+        {type === "textarea" ? (
+          <textarea
+            name={name}
+            className={"customInput " + className}
+            onChange={(e) => onChange && onChange(e?.target?.value, e)}
+            value={value}
+            readOnly={readonly}
+          />
+        ) : (
+          <input
+            type={type}
+            name={name}
+            autoComplete="off"
+            className={"customInput " + className}
+            onChange={(e) => onChange && onChange(e?.target?.value, e)}
+            value={value}
+            readOnly={readonly}
+          />
+        )}
+      </>
+    </div>
+  </Wrapper>
+);
 
 const Wrapper = styled.div<WrapperProps>`
   margin: 10px 0;

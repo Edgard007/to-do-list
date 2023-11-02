@@ -27,26 +27,24 @@ const Button = ({
   backg,
   color,
   borderRad,
-}: ButtonProps) => {
-  return (
-    <Wrapper
-      width={width}
-      backg={backg}
-      color={color}
-      height={height}
-      borderRad={borderRad}
+}: ButtonProps) => (
+  <Wrapper
+    width={width}
+    backg={backg}
+    color={color}
+    height={height}
+    borderRad={borderRad}
+  >
+    <button
+      type={type}
+      onClick={() => onClick && onClick()}
+      className={"customBtn " + (className || "")}
+      disabled={disabled}
     >
-      <button
-        type={type}
-        onClick={() => onClick && onClick()}
-        className={"customBtn " + (className || "")}
-        disabled={disabled}
-      >
-        {text}
-      </button>
-    </Wrapper>
-  );
-};
+      {text}
+    </button>
+  </Wrapper>
+);
 
 const Wrapper = styled.div<WrapperProps>`
   width: ${(props) => props?.width || "90%"};

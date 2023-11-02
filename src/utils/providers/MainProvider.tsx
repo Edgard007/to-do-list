@@ -6,10 +6,8 @@ interface MainProviderProps {
   children: JSX.Element | JSX.Element[];
 }
 
-export const MainProvider = ({ children }: MainProviderProps) => {
-  return (
-    <ConfigProvider>
-      <TodoProvider>{children}</TodoProvider>
-    </ConfigProvider>
-  );
-};
+export const MainProvider = ({ children }: MainProviderProps) => (
+  <ConfigProvider>
+    <TodoProvider>{children}</TodoProvider>
+  </ConfigProvider>
+);

@@ -7,14 +7,12 @@ interface LoggerProps {
   children?: JSX.Element | JSX.Element[];
 }
 
-const Logger = ({ children }: LoggerProps) => {
-  return (
-    <Wrapper>
-      <Navbar />
-      <main>{children}</main>
-    </Wrapper>
-  );
-};
+const Logger = ({ children }: LoggerProps) => (
+  <Wrapper>
+    <Navbar />
+    <main>{children}</main>
+  </Wrapper>
+);
 
 const Wrapper = styled.div`
   width: 100%;
