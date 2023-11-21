@@ -7,6 +7,9 @@ import Logger from "@common/layout/Logger";
 // ==> Pages
 import Home from "@pages/Home";
 
+// ==> Contexts
+import { MainProvider } from "@utils/providers/MainProvider";
+
 const App = () => {
   useEffect(() => {
     console.clear();
@@ -17,11 +20,13 @@ const App = () => {
   }, []);
 
   return (
-    <Suspense fallback={<Loading />}>
-      <Logger>
-        <Home />
-      </Logger>
-    </Suspense>
+    <MainProvider>
+      <Suspense fallback={<Loading />}>
+        <Logger>
+          <Home />
+        </Logger>
+      </Suspense>
+    </MainProvider>
   );
 };
 

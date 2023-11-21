@@ -45,13 +45,13 @@ const Home = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper role="app">
       <section className="first_section">
         <article>
           <h1>{t("app_name")}</h1>
           <p>{t("app_descrip")}</p>
         </article>
-        <form onSubmit={handleSubmit}>
+        <form role="form" onSubmit={handleSubmit}>
           <Input label={t("form_input")} type="text" />
           <Button text={t("form_btn")} type="submit" />
         </form>
