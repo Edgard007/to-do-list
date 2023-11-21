@@ -36,9 +36,10 @@ const Wrapper = styled.section`
   height: 100%;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
   padding: 5rem 1rem;
   overflow: scroll;
 
@@ -56,7 +57,7 @@ const Wrapper = styled.section`
     padding: 1rem;
     box-shadow: 0 0 0.5rem var(--color-secundary);
     width: 90%;
-    height: 5rem;
+    min-height: 5rem;
     text-align: left;
     position: relative;
 
