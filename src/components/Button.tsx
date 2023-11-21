@@ -65,7 +65,7 @@ const Wrapper = styled.div<WrapperProps>`
     /* text-transform: uppercase; */
 
     :hover {
-      box-shadow: 0 0 20px 0 var(--color-secundary-gray);
+      box-shadow: 0 0 0.5rem 0 var(--color-secundary-gray);
     }
 
     :active {
