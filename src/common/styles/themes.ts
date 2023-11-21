@@ -7,6 +7,8 @@ const colors = {
   black: "#202124",
   blue: "#002D57",
   lightBlue: "hsl(214,100%,59%)",
+  green: "#6EA03A",
+  limeGreen: "#00C853",
 };
 
 export const lightTheme: DefaultTheme = {
@@ -17,6 +19,7 @@ export const lightTheme: DefaultTheme = {
   // Statics
   light: colors?.white,
   black: colors?.black,
+  green: colors?.green,
 };
 
 export const darkTheme: DefaultTheme = {
@@ -27,4 +30,5 @@ export const darkTheme: DefaultTheme = {
   // Statics
   light: colors?.white,
   black: colors?.black,
+  green: colors?.limeGreen,
 };

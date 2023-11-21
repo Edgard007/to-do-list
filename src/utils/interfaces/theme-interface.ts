@@ -5,4 +5,6 @@ export interface DefaultTheme {
 
   light?: string;
   black?: string;
+
+  green?: string;
 }

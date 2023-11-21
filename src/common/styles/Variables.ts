@@ -46,7 +46,7 @@ const Variables = css<{ theme?: DefaultTheme }>`
     --color-red: #f11434;
 
     --color-yellow: #f6c90e;
-    --color-green: #306844;
+    --color-green: ${({ theme }) => theme.green};
     --color-orange: #ff7a3c;
     --color-skyblue: #77b5fe;
 

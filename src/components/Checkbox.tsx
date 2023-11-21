@@ -34,7 +34,7 @@ const Wrapper = styled.div`
     left: 0;
     width: var(--size);
     height: var(--size);
-    background-color: var(--color-secundary);
+    background-color: var(--color-gray);
     border-radius: 50%;
     border: 1px solid var(--color-primary);
     cursor: pointer;
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
       content: "✓";
       font-size: calc(var(--size) * 0.5);
       font-weight: var(--bold-weight);
-      color: var(--color-secundary);
+      color: var(--color-gray);
       opacity: 0;
       position: absolute;
       top: 50%;
