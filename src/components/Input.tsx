@@ -32,7 +32,7 @@ const Input = ({
         {type === "textarea" ? (
           <textarea
             name={name}
-            className={"customInput " + className}
+            className={"customInput " + (className || "")}
             onChange={(e) => onChange && onChange(e?.target?.value, e)}
             value={value}
             readOnly={readonly}
@@ -42,7 +42,7 @@ const Input = ({
             type={type}
             name={name}
             autoComplete="off"
-            className={"customInput " + className}
+            className={"customInput " + (className || "")}
             onChange={(e) => onChange && onChange(e?.target?.value, e)}
             value={value}
             readOnly={readonly}
