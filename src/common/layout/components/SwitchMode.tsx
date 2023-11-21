@@ -77,8 +77,6 @@ const Wrapper = styled.div<StyledProps>`
   label {
     --bg: var(--color-skyblue);
 
-    display: flex;
-    flex-direction: row;
     position: absolute;
     top: 50%;
     right: 0;
@@ -90,16 +88,25 @@ const Wrapper = styled.div<StyledProps>`
     border-radius: 56px;
     transform: translateY(-50%);
     cursor: pointer;
-    transition: var(--slow-animation);
     overflow: hidden;
     border: 1px solid var(--color-secundary);
+
+    transition-property: background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
   }
 
   #star {
-    position: relative;
-    width: 50%;
-    height: 100%;
+    position: absolute;
+    width: 25%;
+    height: 50%;
     background-color: transparent;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    transition-property: transform, width, height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 
     &::before {
       content: "";
@@ -111,110 +118,84 @@ const Wrapper = styled.div<StyledProps>`
       background-color: var(--color-yellow);
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      transition: var(--slow-animation);
+
+      transition-property: transform, scale;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
     }
-  }
-
-  #star-1 {
-    position: absolute;
-  }
-
-  #star-2 {
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(36deg);
   }
 
   .star {
+    position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 0px;
     color: var(--color-yellow);
-    transition: var(--slow-animation);
     transform: translate(-50%, -50%);
+
+    transition-property: font-size;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
   }
 
-  #moon {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background-color: transparent;
-    display: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      background-color: var(--color-secundary);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: var(--slow-animation);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15%;
-      left: 8%;
-      width: 10px;
-      height: 10px;
-      background-color: var(--color-black);
-      border-radius: 50%;
-      transition: var(--slow-animation);
-    }
-  }
-
-  #toggle_checkbox:checked + label {
-    --bg: var(--color-primary);
-  }
-
-  #toggle_checkbox:checked + label #star {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    &::before {
-      top: 36%;
-      right: 25%;
-      left: auto;
-      width: 2px;
-      height: 2px;
-      transform: translateY(-50%);
-      z-index: 1;
-    }
-  }
-
-  #toggle_checkbox:checked + label .star {
-    top: 35%;
-    right: 23%;
-    left: auto;
-    font-size: 4px;
-    transform: translateY(-50%);
+  #star-1 {
     z-index: 1;
   }
 
-  #toggle_checkbox:checked + label #star-2 {
-    transform: rotate(36deg);
+  #star-2 {
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(36deg);
+  }
+
+  #toggle_checkbox:checked + label #star {
+    transform: translate(250%, -100%);
+    width: 15%;
+    height: 30%;
+    z-index: 1;
+
+    &::before {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    .star {
+      font-size: 7px;
+    }
+  }
+
+  #moon {
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    background-color: var(--color-secundary);
+    top: 50%;
+    right: 0%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition-property: transform, width, height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    scale: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      width: 8px;
+      height: 8px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      transition-property: transform, scale;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
   }
 
   #toggle_checkbox:checked + label #moon {
-    display: block;
-    width: 100%;
-
-    &::before {
-      left: auto;
-      right: 10%;
-      transform: translateY(-50%);
-    }
-
-    &::after {
-      top: 15%;
-      right: 18%;
-      left: auto;
-    }
+    scale: 1;
   }
 `;
 
