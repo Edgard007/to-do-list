@@ -5,12 +5,17 @@ interface CheckboxProps {
   onChange?: (value: boolean) => void;
 }
 
-const Checkbox = ({}: CheckboxProps) => {
+const Checkbox = ({ value, onChange }: CheckboxProps) => {
   const _id = crypto.getRandomValues(new Uint32Array(1))[0].toString(16);
 
   return (
     <Wrapper>
-      <input type="checkbox" id={_id} />
+      <input
+        type="checkbox"
+        id={_id}
+        onChange={(e) => onChange && onChange(e.target.checked)}
+        defaultChecked={value}
+      />
       <label htmlFor={_id}></label>
     </Wrapper>
   );

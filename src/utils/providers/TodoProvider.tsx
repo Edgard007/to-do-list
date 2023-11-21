@@ -29,16 +29,19 @@ const defaultState: ITask[] = [
     id: crypto.randomUUID(),
     text: "Learn React",
     timestamp: new Date().getTime(),
+    completed: true,
   },
   {
     id: crypto.randomUUID(),
     text: "Learn TypeScript",
     timestamp: new Date().getTime(),
+    completed: false,
   },
   {
     id: crypto.randomUUID(),
     text: "Learn Vite",
     timestamp: new Date().getTime(),
+    completed: false,
   },
 ];
 

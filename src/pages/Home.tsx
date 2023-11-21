@@ -32,6 +32,7 @@ const Home = () => {
       id: crypto.randomUUID(),
       text: value,
       timestamp: new Date().getTime(),
+      completed: false,
     };
 
     dispatch({

@@ -4,4 +4,5 @@ export interface ITask {
   id: ItemId;
   timestamp: number;
   text: string;
+  completed: boolean;
 }

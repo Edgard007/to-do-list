@@ -6,6 +6,9 @@ import { ItemId } from "@interfaces/todo-interface";
 // ==> Use Context
 import useTodoContext from "@utils/contexts/useTodoContext";
 
+// Components
+import Checkbox from "./Checkbox";
+
 const Card = () => {
   // == Context
   const { state, dispatch } = useTodoContext();
@@ -19,12 +22,22 @@ const Card = () => {
     });
   };
 
+  const toggleTask = (id: ItemId) => {
+    dispatch({
+      type: "UP_COMPLETE",
+      payload: {
+        id,
+      },
+    });
+  };
+
   return (
     <Wrapper>
-      {(state ?? []).map((item) => (
-        <div key={item.id} className="card">
-          <p>{item.text}</p>
-          <span onClick={() => removeTask(item?.id)}>x</span>
+      {(state ?? []).map(({ id, text, completed }) => (
+        <div key={id} className="card">
+          <Checkbox value={completed} onChange={() => toggleTask(id)} />
+          <p className={completed ? "through" : ""}>{text}</p>
+          <span onClick={() => removeTask(id)}>x</span>
         </div>
       ))}
     </Wrapper>
@@ -41,7 +54,7 @@ const Wrapper = styled.section`
   justify-content: flex-start;
   gap: 1.5rem;
   padding: 5rem 1rem;
-  overflow: scroll;
+  overflow: auto;
 
   @media (max-width: 800px) {
     padding: 0.5rem 1.5rem;
@@ -52,6 +65,12 @@ const Wrapper = styled.section`
   }
 
   .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
     background-color: var(--color-primary);
     border-radius: 0.5rem;
     padding: 1rem;
@@ -83,8 +102,12 @@ const Wrapper = styled.section`
 
       &:hover {
         border-radius: 50%;
-        box-shadow: 0 0 0.5rem var(--color-yellow);
+        box-shadow: 0 0 1rem var(--color-red);
       }
+    }
+
+    .through {
+      text-decoration: line-through;
     }
   }
 `;

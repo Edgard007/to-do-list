@@ -20,6 +20,18 @@ const todoReducer = (
       localStorage.setItem("TODO", JSON.stringify(body));
       return body;
 
+    case "UP_COMPLETE":
+      const { id: _id } = action?.payload;
+
+      body = state.map((item: ITask) => {
+        const { id, completed } = item;
+
+        return id === _id ? { ...item, completed: !completed } : item;
+      });
+
+      localStorage.setItem("TODO", JSON.stringify(body));
+      return body;
+
     case "REMOVE":
       const record = action?.payload;
       body = state.filter((item: ITask) => item?.id !== record?.id);
